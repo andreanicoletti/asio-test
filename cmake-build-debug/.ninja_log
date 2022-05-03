@@ -1,5 +1,11 @@
 # ninja log v5
 0	1063	6724964838949365	CMakeFiles/briscola_test.dir/main.cpp.obj	41f2185db470f35e
-1066	1345	6724964841746426	briscola_test.exe	f59887b123891c6f
-1	1150	6724969941007069	CMakeFiles/briscola_test.dir/src/main.cpp.obj	e353a52d193c3cd7
-1154	1340	6724969942895982	briscola_test.exe	e729926c02354388
+8	4748	6727105674736712	CMakeFiles/briscola_test.dir/src/main.cpp.obj	f538453989675710
+5	4202	6732770639934860	CMakeFiles/briscola-test.dir/src/main.cpp.obj	2c12cac1909da777
+1102	1247	6725217198197390	libbriscola-lib.a	6741cf68b2104fab
+565	723	6725217756918768	libbriscola-lib.dll.a	717476f603899fb4
+4203	4813	6732770646051406	briscola-test.exe	27ab38921c7d26b1
+3	564	6725217755336340	CMakeFiles/briscola-lib.dir/src/main.cpp.obj	ca6c7995078b1b57
+565	723	6725217756918768	libbriscola-lib.dll	717476f603899fb4
+1	11139	6732879465242587	CMakeFiles/server.dir/src/chat_server.cpp.obj	3e88650c1d6a3492
+11149	15990	6732879513868562	server.exe	5a63cd9e0f4ddaa6

@@ -41,37 +41,72 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/andre/CLionProjects/briscola-test/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target briscola_test
+# Object build statements for EXECUTABLE target briscola-test
 
 
 #############################################
-# Order-only phony target for briscola_test
+# Order-only phony target for briscola-test
 
-build cmake_object_order_depends_target_briscola_test: phony || CMakeFiles/briscola_test.dir
+build cmake_object_order_depends_target_briscola-test: phony || CMakeFiles/briscola-test.dir
 
-build CMakeFiles/briscola_test.dir/src/main.cpp.obj: CXX_COMPILER__briscola_test_Debug C$:/Users/andre/CLionProjects/briscola-test/src/main.cpp || cmake_object_order_depends_target_briscola_test
-  DEP_FILE = CMakeFiles\briscola_test.dir\src\main.cpp.obj.d
-  FLAGS = -g -std=gnu++20
-  OBJECT_DIR = CMakeFiles\briscola_test.dir
-  OBJECT_FILE_DIR = CMakeFiles\briscola_test.dir\src
+build CMakeFiles/briscola-test.dir/src/main.cpp.obj: CXX_COMPILER__briscola-test_Debug C$:/Users/andre/CLionProjects/briscola-test/src/main.cpp || cmake_object_order_depends_target_briscola-test
+  DEP_FILE = CMakeFiles\briscola-test.dir\src\main.cpp.obj.d
+  FLAGS = -g -DASIO_STANDALONE -std=gnu++20
+  INCLUDES = -IC:/Users/andre/CLionProjects/briscola-test/asio/asio/include -IC:/Users/andre/CLionProjects/briscola-test/doctest/doctest
+  OBJECT_DIR = CMakeFiles\briscola-test.dir
+  OBJECT_FILE_DIR = CMakeFiles\briscola-test.dir\src
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target briscola_test
+# Link build statements for EXECUTABLE target briscola-test
 
 
 #############################################
-# Link the executable briscola_test.exe
+# Link the executable briscola-test.exe
 
-build briscola_test.exe: CXX_EXECUTABLE_LINKER__briscola_test_Debug CMakeFiles/briscola_test.dir/src/main.cpp.obj
+build briscola-test.exe: CXX_EXECUTABLE_LINKER__briscola-test_Debug CMakeFiles/briscola-test.dir/src/main.cpp.obj
   FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\briscola_test.dir
+  LINK_LIBRARIES = -lws2_32  -lwsock32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\briscola-test.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = briscola_test.exe
-  TARGET_IMPLIB = libbriscola_test.dll.a
-  TARGET_PDB = briscola_test.exe.dbg
+  TARGET_FILE = briscola-test.exe
+  TARGET_IMPLIB = libbriscola-test.dll.a
+  TARGET_PDB = briscola-test.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target server
+
+
+#############################################
+# Order-only phony target for server
+
+build cmake_object_order_depends_target_server: phony || CMakeFiles/server.dir
+
+build CMakeFiles/server.dir/src/chat_server.cpp.obj: CXX_COMPILER__server_Debug C$:/Users/andre/CLionProjects/briscola-test/src/chat_server.cpp || cmake_object_order_depends_target_server
+  DEP_FILE = CMakeFiles\server.dir\src\chat_server.cpp.obj.d
+  FLAGS = -g -DASIO_STANDALONE -std=gnu++20
+  INCLUDES = -IC:/Users/andre/CLionProjects/briscola-test/asio/asio/include
+  OBJECT_DIR = CMakeFiles\server.dir
+  OBJECT_FILE_DIR = CMakeFiles\server.dir\src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target server
+
+
+#############################################
+# Link the executable server.exe
+
+build server.exe: CXX_EXECUTABLE_LINKER__server_Debug CMakeFiles/server.dir/src/chat_server.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lws2_32  -lwsock32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\server.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = server.exe
+  TARGET_IMPLIB = libserver.dll.a
+  TARGET_PDB = server.exe.dbg
 
 
 #############################################
@@ -99,7 +134,9 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build briscola_test: phony briscola_test.exe
+build briscola-test: phony briscola-test.exe
+
+build server: phony server.exe
 
 # =============================================================================
 # Folder targets.
@@ -109,7 +146,7 @@ build briscola_test: phony briscola_test.exe
 #############################################
 # Folder: C:/Users/andre/CLionProjects/briscola-test/cmake-build-debug
 
-build all: phony briscola_test.exe
+build all: phony briscola-test.exe server.exe
 
 # =============================================================================
 # Built-in targets
