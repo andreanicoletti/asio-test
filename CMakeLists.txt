@@ -11,7 +11,7 @@ target_compile_options(asio INTERFACE -DASIO_STANDALONE)
 if(UNIX)
     target_compile_options(asio INTERFACE -lpthread)
 elseif(WIN32 OR MINGW)
-    target_link_libraries(asio  INTERFACE ws2_32 wsock32)
+    target_link_libraries(asio INTERFACE ws2_32 wsock32)
 endif()
 
 # SFML library
@@ -34,3 +34,6 @@ target_link_libraries(briscola-test PRIVATE doctest)
 
 add_executable(server src/chat_server.cpp)
 target_link_libraries(server PRIVATE asio)
+
+add_executable(client src/chat_client.cpp)
+target_link_libraries(client PRIVATE asio)

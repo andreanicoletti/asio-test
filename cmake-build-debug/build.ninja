@@ -108,6 +108,40 @@ build server.exe: CXX_EXECUTABLE_LINKER__server_Debug CMakeFiles/server.dir/src/
   TARGET_IMPLIB = libserver.dll.a
   TARGET_PDB = server.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target client
+
+
+#############################################
+# Order-only phony target for client
+
+build cmake_object_order_depends_target_client: phony || CMakeFiles/client.dir
+
+build CMakeFiles/client.dir/src/chat_client.cpp.obj: CXX_COMPILER__client_Debug C$:/Users/andre/CLionProjects/briscola-test/src/chat_client.cpp || cmake_object_order_depends_target_client
+  DEP_FILE = CMakeFiles\client.dir\src\chat_client.cpp.obj.d
+  FLAGS = -g -DASIO_STANDALONE -std=gnu++20
+  INCLUDES = -IC:/Users/andre/CLionProjects/briscola-test/asio/asio/include
+  OBJECT_DIR = CMakeFiles\client.dir
+  OBJECT_FILE_DIR = CMakeFiles\client.dir\src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target client
+
+
+#############################################
+# Link the executable client.exe
+
+build client.exe: CXX_EXECUTABLE_LINKER__client_Debug CMakeFiles/client.dir/src/chat_client.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lws2_32  -lwsock32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\client.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = client.exe
+  TARGET_IMPLIB = libclient.dll.a
+  TARGET_PDB = client.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -136,6 +170,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build briscola-test: phony briscola-test.exe
 
+build client: phony client.exe
+
 build server: phony server.exe
 
 # =============================================================================
@@ -146,7 +182,7 @@ build server: phony server.exe
 #############################################
 # Folder: C:/Users/andre/CLionProjects/briscola-test/cmake-build-debug
 
-build all: phony briscola-test.exe server.exe
+build all: phony briscola-test.exe server.exe client.exe
 
 # =============================================================================
 # Built-in targets
